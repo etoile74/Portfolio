@@ -1,0 +1,299 @@
+/*################### Mobile #########################*/
+@media (max-width: 1024px) {
+  aside {
+    display: none; /* on masque complètement le menu */
+  }
+
+  .mySwiper {
+    width: 100vw; /* le contenu prend toute la largeur */
+  }
+
+  .slide-help {
+    display: none; /* on masque */
+  }
+  
+  footer {
+    display: none; /* on masque */
+  }
+}
+/*####################################################
+
+/*##############" Flèches de navigation mobile ###########*/
+.mobile-nav {
+  display: none; /* caché par défaut */
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  gap: 20px;
+}
+
+.mobile-nav button {
+  background: #212529;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.mobile-nav button:hover {
+  background: #80ed99;
+  color: black;
+}
+
+@media (max-width: 1024px) {
+  .mobile-nav {
+    display: flex; /* visible seulement sur petit écran */
+  }
+}
+/*###########################################################*/
+
+
+/*############# Adaptation de la section HomeContent ################*/
+@media (max-width: 1024px) {
+  .SideImg {
+    width: 50%;            /* plus large sur mobile */
+    margin: 20px auto;     /* centré horizontalement */
+    position: relative;
+  }
+
+  .SideImg img {
+    width: 100%;
+    height: auto;          /* conserve les proportions */
+    border-radius: 10px;
+  }
+
+  /* coins décoratifs adaptés */
+  .SideImg .top-right-corner, .SideImg .bottom-left-corner {
+    display: none; /* on cache les gros traits sur mobile pour alléger */
+  }
+}
+
+@media (max-width: 768px) {
+  .SideImg {
+    width: 80%;           /* prend toute la largeur sur très petit écran */
+    margin: 10px auto;
+  }
+  .HomeContent {
+    padding: 40px;
+  }  
+}
+
+@media (max-width: 480px) {
+  .SideImg {
+    width: 100%;           /* prend toute la largeur sur très petit écran */
+    margin: 10px auto;
+  }
+  .HomeContent {
+    padding: 20px;
+  }
+}
+/*###########################################################*/
+
+
+/*######## Adaptation de la section Presentation ##############*/
+@media (max-width: 1024px) {
+  .about-me-divison {
+    flex-direction: column; /* Met en colonne au lieu de côte à côte */
+  }
+
+  .about-me-table {
+    width: 100%; /* prend toute la largeur */
+    margin-bottom: 20px; /* espace avec la section skills */
+  }
+
+  .skills-section {
+    width: 100%; /* occupe toute la largeur */
+  }
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        padding: 40px;
+    }
+    .skill-bar {
+        margin: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us {
+        padding: 20px;
+    }
+}
+/*##################################################################*/
+
+
+/*############## Adaptation de la section Services ################*/
+@media (max-width: 1024px) {
+  /* Adapter la grille Services */
+  .services {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+    .swiper-slide.services {
+        padding-left: 3px;
+        padding-right: 3px;
+        padding-bottom: 80px;
+    }
+}
+/*##################################################################*/
+
+/*########## Adaptation de la section Galerie ##############*/
+/* ------------------ Mobile ≤1024px ------------------ */
+@media (max-width: 1024px) {
+  .swiper-slide.gallery {
+    column-count: 2;       /* 2 colonnes */
+    column-gap: 12px;      /* espace horizontal entre colonnes */
+    padding: 20px;
+  }
+
+  /* Le titre reste au-dessus */
+  .swiper-slide.gallery .heading {
+    column-span: all;      /* le titre traverse toutes les colonnes */
+    text-align: center;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  /* Les projets s’écoulent verticalement */
+  .swiper-slide.gallery .project {
+    break-inside: avoid;   /* empêche qu’un bloc soit coupé en deux */
+    margin-bottom: 12px;   /* espace vertical entre les blocs */
+    border-radius: 10px;
+    overflow: hidden;
+    background: #212529;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .swiper-slide.gallery .project img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .swiper-slide.gallery .project h2 {
+    font-size: 1.2rem;
+    padding: 6px;
+    text-align: center;
+  }
+}
+
+/* ------------------ Mobile ≤768px ------------------ */
+@media (max-width: 768px) {
+  .swiper-slide.gallery {
+    column-count: 2;
+    column-gap: 9px; /* réduit l’espace horizontal */
+    padding: 12px;
+  }
+
+  .swiper-slide.gallery .project {
+    margin-bottom: 12px; /* espace vertical un peu réduit */
+  }
+
+  .swiper-slide.gallery .project h2 {
+    font-size: 0.9rem; /* texte plus compact */
+    padding: 5px;
+  }
+}
+
+/* ------------------ Très petits écrans ≤480px ------------------ */
+@media (max-width: 480px) {
+  .swiper-slide.gallery {
+    column-count: 1; /* 1 seule colonne */
+    padding: 10px;
+  }
+
+  .swiper-slide.gallery .project {
+    margin-bottom: 10px;
+  }
+
+  .swiper-slide.gallery .project h2 {
+    font-size: 0.85rem;
+  }
+}
+/*##################################################################*/
+
+
+/*############## Adaptation de la section Contact ##################*/
+@media (max-width: 1024px) {
+  .contactMe {
+    display: flex;
+    flex-direction: column; /* tout en colonne */
+    padding: 20px;          /* moins de padding */
+    gap: 20px;              /* espace entre les blocs */
+  }
+
+  .contactMe h1 {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .contactinfo {
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .contactMe form {
+    display: flex;
+    flex-direction: column; /* champs empilés */
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contactMe form input {
+    width: 100%;  /* pleine largeur */
+    margin: 10px 0;
+    padding: 30px;
+    font-size: 1.3rem;
+  }
+
+  .contactMe form textarea {
+    width: 100%;  /* pleine largeur */
+    margin: 10px 0;
+    padding: 50px;
+    font-size: 1.3rem;
+  }
+
+  .contactMe form h2 {
+    flex-direction: column; /* titre + icônes réseaux l’un sous l’autre */
+    align-items: center;
+    text-align: center;
+  }
+
+  .contactMe form h2 .SocialLinks {
+    margin: 10px auto 0 auto; /* centrer les icônes */
+  }
+
+  .contactMe button {
+    width: 50%;
+    margin-top: 15px;
+  }
+}
+/*#####################################################################*/
+
+
+
+
+/*########## Autoriser le scroll dans certaines pages ##############*/
+@media (max-width: 1024px) {
+  .home-slide, .services, .gallery, .contactMe {
+    height: auto;         /* pas de hauteur forcée */
+    min-height: 100vh;    /* au moins la taille de l’écran */
+    overflow-y: auto;     /* active le scroll vertical */
+    padding: 20px;        /* allège les marges sur mobile */
+    padding-bottom: 80px;
+  }
+}
+/*################################################################*/
